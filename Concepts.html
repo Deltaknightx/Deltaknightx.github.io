@@ -1,16 +1,31 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Key Concepts — HTTP</title>
+
+  <!--
+    concepts.html
+    Provides key vocabulary and foundational concepts related to HTTP.
+  -->
+
+  <title>Key Concepts — HTTP Fundamentals</title>
+
+  <!-- Global stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <!-- Page container for layout and centering -->
   <div class="container">
+
+    <!-- ==========================================
+         HEADER + NAVIGATION
+    =========================================== -->
     <header id="main-header">
-      <h1>Key Concepts of HTTP</h1>
-      <p class="small">Short definitions of important terms</p>
+      <h1 class="fade-in">Key Concepts of HTTP</h1>
+      <p class="small fade-in">Short definitions of essential HTTP terms for study and quiz review</p>
 
       <nav aria-label="Main site navigation">
         <ul>
@@ -20,58 +35,110 @@
           <li><a href="concepts.html">Key Concepts</a></li>
           <li><a href="references.html">References</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
         </ul>
       </nav>
     </header>
 
+
+    <!-- ==========================================
+         MAIN CONTENT AREA
+         Presents key definitions in card layout grid.
+    =========================================== -->
     <main class="article">
-      <section>
-        <h2>Essential terms</h2>
+
+      <section class="fade-in">
+        <span class="section-badge">Essential Terms</span>
+        <h2>Important Terms Used Throughout This Site</h2>
+
+        <!-- Grid layout for concept cards -->
         <div class="concepts-grid">
-          <div class="concept-card">
+
+          <!-- Each card explains one HTTP-related term -->
+
+          <div class="concept-card fade-in">
             <h3>HTTP</h3>
-            <p>Hypertext Transfer Protocol — the application-layer protocol used by web clients and servers.</p>
+            <p>
+              The <strong>Hypertext Transfer Protocol</strong>, the core application-layer protocol used for
+              communication between clients (browsers) and servers on the Web. It uses a request/response model.
+            </p>
           </div>
 
-          <div class="concept-card">
+          <div class="concept-card fade-in">
             <h3>HTTPS</h3>
-            <p>HTTP over TLS (encryption and authentication). Browsers expect HTTPS for privacy and integrity.</p>
+            <p>
+              Secure version of HTTP that uses <strong>TLS encryption</strong> to ensure confidentiality,
+              integrity, and authentication. Required for modern websites and APIs.
+            </p>
           </div>
 
-          <div class="concept-card">
+          <div class="concept-card fade-in">
             <h3>Request / Response</h3>
-            <p>Clients send requests (method, URL, headers), servers return responses (status code, headers, body).</p>
+            <p>
+              The fundamental structure of HTTP communication: a client sends a <strong>request</strong>
+              (method, URL, headers), and the server returns a <strong>response</strong> (status code, headers, body).
+            </p>
           </div>
 
-          <div class="concept-card">
+          <div class="concept-card fade-in">
             <h3>Status Codes</h3>
-            <p>3-digit codes (200 OK, 301 Redirect, 404 Not Found, 500 Server Error) that indicate result of a request.</p>
+            <p>
+              Three-digit codes that indicate the result of a request. Examples include:
+              <strong>200 OK</strong>, <strong>301 Moved</strong>, <strong>404 Not Found</strong>,
+              and <strong>500 Server Error</strong>.
+            </p>
           </div>
 
-          <div class="concept-card">
+          <div class="concept-card fade-in">
             <h3>QUIC</h3>
-            <p>UDP-based transport protocol used by HTTP/3 that integrates TLS and reduces connection latency.</p>
+            <p>
+              A modern transport protocol built on <strong>UDP</strong>. QUIC integrates TLS, reduces
+              connection setup time, and prevents TCP-style head-of-line blocking. Used by HTTP/3.
+            </p>
           </div>
 
-          <div class="concept-card">
+          <div class="concept-card fade-in">
             <h3>Multiplexing</h3>
-            <p>Sending multiple requests/responses concurrently on one connection (used in HTTP/2), reducing latency.</p>
+            <p>
+              A performance feature of HTTP/2 allowing multiple independent requests and responses to
+              share a single connection, reducing latency and improving page load speed.
+            </p>
           </div>
 
-          <div class="concept-card">
+          <div class="concept-card fade-in">
             <h3>REST</h3>
-            <p>Representational State Transfer — common architectural style for web APIs that uses HTTP methods semantically.</p>
+            <p>
+              <strong>Representational State Transfer</strong> — a popular architectural style used for
+              designing web APIs. REST uses standard HTTP methods like GET, POST, PUT, DELETE to operate on resources.
+            </p>
           </div>
+
+          <!-- Additional card for completeness -->
+          <div class="concept-card fade-in">
+            <h3>Headers</h3>
+            <p>
+              Metadata included in HTTP requests and responses. Headers specify important details such as
+              content type, cookies, authentication, caching behavior, and connection rules.
+            </p>
+          </div>
+
         </div>
       </section>
+
     </main>
 
-    <footer class="site-footer">
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+    <footer class="site-footer fade-in">
       <div class="small">© Edric Huang — IT 3203</div>
       <div class="small">
-        This is a class project for IT 3203 — <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">ksuweb.github.io/IT3203/</a>
+        Class Project — Introduction to Web Development
       </div>
     </footer>
+
   </div>
 </body>
+
 </html>
