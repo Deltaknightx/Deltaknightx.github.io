@@ -6,27 +6,28 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
   <!--
-    concepts.html
-    Provides key vocabulary and foundational concepts related to HTTP.
+    history.html
+    Explains the origins and evolution of early HTTP versions.
   -->
 
-  <title>Key Concepts — HTTP Fundamentals</title>
+  <title>History of HTTP — Early Development & Versions</title>
 
-  <!-- Global stylesheet -->
+  <!-- Link to global stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- Page container for layout and centering -->
   <div class="container">
 
     <!-- ==========================================
-         HEADER + NAVIGATION
+         HEADER SECTION
+         Title + Navigation menu 
     =========================================== -->
     <header id="main-header">
-      <h1 class="fade-in">Key Concepts of HTTP</h1>
-      <p class="small fade-in">Short definitions of essential HTTP terms for study and quiz review</p>
+      <h1 class="fade-in">History of HTTP</h1>
+      <p class="small fade-in">Origins, early protocol versions, and technical evolution</p>
 
+      <!-- Full navigation bar -->
       <nav aria-label="Main site navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -43,85 +44,112 @@
 
     <!-- ==========================================
          MAIN CONTENT AREA
-         Presents key definitions in card layout grid.
+         Covers HTTP/0.9, HTTP/1.0, HTTP/1.1
     =========================================== -->
     <main class="article">
 
+      <!-- Origins -->
       <section class="fade-in">
-        <span class="section-badge">Essential Terms</span>
-        <h2>Important Terms Used Throughout This Site</h2>
+        <span class="section-badge">1989–1991</span>
+        <h2>Origins of HTTP</h2>
 
-        <!-- Grid layout for concept cards -->
-        <div class="concepts-grid">
+        <!-- Introductory paragraph describing early development -->
+        <p>
+          The Hypertext Transfer Protocol began at CERN when Sir Tim Berners-Lee proposed the World Wide Web.
+          His early work included a simple client, a server, and a lightweight protocol for transferring hypertext
+          documents. This early design would become HTTP/0.9.
+        </p>
 
-          <!-- Each card explains one HTTP-related term -->
+        <ul>
+          <li><strong>1989:</strong> Proposal for a distributed information system</li>
+          <li><strong>1990:</strong> First browser and server prototypes built</li>
+          <li><strong>1991:</strong> Public release of the early Web project</li>
+        </ul>
 
-          <div class="concept-card fade-in">
-            <h3>HTTP</h3>
-            <p>
-              The <strong>Hypertext Transfer Protocol</strong>, the core application-layer protocol used for
-              communication between clients (browsers) and servers on the Web. It uses a request/response model.
-            </p>
-          </div>
+        <div class="info-box">
+          The early versions of HTTP were intentionally simple to encourage adoption and experimentation.
+        </div>
+      </section>
 
-          <div class="concept-card fade-in">
-            <h3>HTTPS</h3>
-            <p>
-              Secure version of HTTP that uses <strong>TLS encryption</strong> to ensure confidentiality,
-              integrity, and authentication. Required for modern websites and APIs.
-            </p>
-          </div>
 
-          <div class="concept-card fade-in">
-            <h3>Request / Response</h3>
-            <p>
-              The fundamental structure of HTTP communication: a client sends a <strong>request</strong>
-              (method, URL, headers), and the server returns a <strong>response</strong> (status code, headers, body).
-            </p>
-          </div>
+      <!-- HTTP/0.9 -->
+      <section class="fade-in">
+        <span class="section-badge">HTTP/0.9</span>
+        <h2>HTTP/0.9 — The One-Line Protocol</h2>
 
-          <div class="concept-card fade-in">
-            <h3>Status Codes</h3>
-            <p>
-              Three-digit codes that indicate the result of a request. Examples include:
-              <strong>200 OK</strong>, <strong>301 Moved</strong>, <strong>404 Not Found</strong>,
-              and <strong>500 Server Error</strong>.
-            </p>
-          </div>
+        <p>
+          HTTP/0.9 was extremely simple and designed only for transferring raw HTML. It supported just one method,
+          <strong>GET</strong>, and responses contained no headers — only HTML content.
+        </p>
 
-          <div class="concept-card fade-in">
-            <h3>QUIC</h3>
-            <p>
-              A modern transport protocol built on <strong>UDP</strong>. QUIC integrates TLS, reduces
-              connection setup time, and prevents TCP-style head-of-line blocking. Used by HTTP/3.
-            </p>
-          </div>
+        <ul>
+          <li>Single method: <strong>GET</strong></li>
+          <li>No status codes</li>
+          <li>No headers</li>
+          <li>Text-based responses only</li>
+        </ul>
 
-          <div class="concept-card fade-in">
-            <h3>Multiplexing</h3>
-            <p>
-              A performance feature of HTTP/2 allowing multiple independent requests and responses to
-              share a single connection, reducing latency and improving page load speed.
-            </p>
-          </div>
+        <div class="info-box">
+          HTTP/0.9 pages could not include images, styling, or scripts — only plain HTML.
+        </div>
+      </section>
 
-          <div class="concept-card fade-in">
-            <h3>REST</h3>
-            <p>
-              <strong>Representational State Transfer</strong> — a popular architectural style used for
-              designing web APIs. REST uses standard HTTP methods like GET, POST, PUT, DELETE to operate on resources.
-            </p>
-          </div>
 
-          <!-- Additional card for completeness -->
-          <div class="concept-card fade-in">
-            <h3>Headers</h3>
-            <p>
-              Metadata included in HTTP requests and responses. Headers specify important details such as
-              content type, cookies, authentication, caching behavior, and connection rules.
-            </p>
-          </div>
+      <!-- HTTP/1.0 + HTTP/1.1 -->
+      <section class="fade-in">
+        <span class="section-badge">1996–1997</span>
+        <h2>HTTP/1.0 and HTTP/1.1 — Growing the Web</h2>
 
+        <p>
+          As the Web exploded in popularity, HTTP needed richer features. HTTP/1.0 introduced status codes,
+          headers, and support for more media types. Shortly after, HTTP/1.1 standardized persistent connections,
+          caching rules, and chunked transfer encoding.
+        </p>
+
+        <ul>
+          <li><strong>HTTP/1.0</strong> — Introduced headers, MIME types, basic caching, and status codes.</li>
+          <li><strong>HTTP/1.1</strong> — Added persistent connections, chunked transfers, and better caching.</li>
+        </ul>
+
+        <div class="info-box">
+          Most of the modern Web still uses HTTP/1.1, especially for APIs and legacy systems.
+        </div>
+      </section>
+
+
+      <!-- Why the protocol changed -->
+      <section class="fade-in">
+        <span class="section-badge">Motivation</span>
+        <h2>Why the Protocol Needed Improvement</h2>
+
+        <p>
+          The early Internet was drastically slower than today. Using many TCP connections for every image,
+          script, or style file caused delays. As pages grew more complex, browsers and servers needed ways
+          to reduce latency and reuse existing connections.
+        </p>
+
+        <ul>
+          <li>Growing demand for multimedia content</li>
+          <li>Need for reusable connections</li>
+          <li>Bandwidth limitations</li>
+          <li>More metadata required for dynamic content</li>
+        </ul>
+
+        <div class="info-box">
+          These limitations pushed developers toward new designs, eventually influencing HTTP/2 and HTTP/3.
+        </div>
+      </section>
+
+
+      <!-- Image placeholder -->
+      <section class="fade-in">
+        <span class="section-badge">Visual</span>
+        <h2>Early Web Diagram / Image</h2>
+
+        <div class="figure">
+          <!-- place Image/folder picture related here -->
+          <img src="2001-europaeum-eighth.jpg" alt="Historical photo placeholder" style="max-width:100%;height:auto;">
+          <p class="small">Example: Tim Berners-Lee during early Web development</p>
         </div>
       </section>
 
@@ -142,3 +170,4 @@
 </body>
 
 </html>
+
